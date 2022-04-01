@@ -18,3 +18,7 @@ Caso práctico :
 6:Delete borrar un movimiento.
 
 
+TOMAR LOS EJEMPLOS DE PETICIONES DE LA CARPETA:
+\JSONEjemploPeticiones
+
+
