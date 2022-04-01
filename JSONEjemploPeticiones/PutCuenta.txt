@@ -1,0 +1,5 @@
+{
+    "numeroCuenta": "22587458",
+    "codigoProducto": "25",
+    "tipoCuenta": "Ahorros"
+}

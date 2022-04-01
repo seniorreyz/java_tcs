@@ -1,0 +1,8 @@
+{
+    "fecha": "2022-04-01",
+    "valor": 20.00,
+    "tipo": "ingreso",
+    "cuenta": {
+        "id": 1
+    }
+}
