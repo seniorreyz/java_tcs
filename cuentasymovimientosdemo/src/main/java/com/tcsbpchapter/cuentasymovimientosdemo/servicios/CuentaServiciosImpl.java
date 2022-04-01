@@ -42,7 +42,7 @@ public class CuentaServiciosImpl implements CuentaServicios{
 			all.setCredit(var2.getCredit());
 			all.setDebit(var2.getCredit());
 			all.setDescription(var1.getDescription());
-			all.setRemarks(var2.getRemarks());
+			all.setMovimento(var2.getRemarks());
 			cuentasList.add(all);
 			}
 			}
@@ -63,7 +63,7 @@ public class CuentaServiciosImpl implements CuentaServicios{
 		emovi.setCustomerId(ecuenta.getCustomerId());
 		emovi.setCredit(cuenta.getCredit());
 		emovi.setDebit(cuenta.getDebit());
-		emovi.setRemarks(cuenta.getRemarks());
+		emovi.setRemarks(cuenta.getMovimento());
 		
 		ECuenta ecuenta1=cuentaRepositorio.save(ecuenta);
 		movimientosRepositorio.save(emovi);
@@ -88,7 +88,7 @@ public class CuentaServiciosImpl implements CuentaServicios{
 		cuentas.setCredit(movimiento.getCredit());
 		cuentas.setDebit(movimiento.getDebit());
 		cuentas.setDescription(cuenta.getDescription());
-		cuentas.setRemarks(movimiento.getRemarks());
+		cuentas.setMovimento(movimiento.getRemarks());
 		return cuentas;
 	}
 

@@ -57,8 +57,7 @@ public class CuentasyMovimientosController {
 	{
 		Cuenta cuenta = new Cuenta();
 		cuenta.setCustomerId(id);
-		cuenta.setRemarks(cuentaServicios.deleteCuentabyId(id));
-		cuenta.setDescription(id + "Deleted");
+		cuenta.setDescription(id + cuentaServicios.deleteCuentabyId(id));
 		return cuenta;	
 	}
 }

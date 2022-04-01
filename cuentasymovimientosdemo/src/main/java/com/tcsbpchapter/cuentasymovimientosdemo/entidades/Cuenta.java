@@ -6,15 +6,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonPropertyOrder({"customerId", "customerName", "accountNumber", "credit", "debit", "movimiento" , "description"})
 public class Cuenta {
+	@JsonProperty("customerId")
 	private long CustomerId;
+	@JsonProperty("accountNumber")
 	private String AccountNumber;
+	@JsonProperty("customerName")
 	private String CustomerName;
+	@JsonProperty("description")
 	private String Description;
+	@JsonProperty("credit")
 	private String Credit;
+	@JsonProperty("debit")
 	private String Debit;
-	private String Remarks;
+	@JsonProperty("movimiento")
+	@JsonIgnoreProperties
+	private String Movimento;
 	public long getCustomerId() {
 		return CustomerId;
 	}
@@ -51,11 +63,11 @@ public class Cuenta {
 	public void setDebit(String debit) {
 		Debit = debit;
 	}
-	public String getRemarks() {
-		return Remarks;
+	public String getMovimento() {
+		return Movimento;
 	}
-	public void setRemarks(String remarks) {
-		Remarks = remarks;
+	public void setMovimento(String movimiento) {
+		Movimento = movimiento;
 	}
 	
 
