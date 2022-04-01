@@ -8,8 +8,6 @@ import javax.persistence.Table;
 
 
 public class Cuenta {
-
-
 	private long CustomerId;
 	private String AccountNumber;
 	private String CustomerName;

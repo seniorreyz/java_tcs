@@ -21,6 +21,7 @@ public class CuentaServiciosImpl implements CuentaServicios{
 
 	@Autowired
 	CuentaRepositorio cuentaRepositorio;
+	@Autowired
 	MovimientosRepositorio movimientosRepositorio;
 	
 	@Override
@@ -59,14 +60,14 @@ public class CuentaServiciosImpl implements CuentaServicios{
 		ecuenta.setDescription(cuenta.getDescription());
 		
 		EMovimiento emovi= new EMovimiento();
-		emovi.setCustomerId(cuenta.getCustomerId());
+		emovi.setCustomerId(ecuenta.getCustomerId());
 		emovi.setCredit(cuenta.getCredit());
 		emovi.setDebit(cuenta.getDebit());
 		emovi.setRemarks(cuenta.getRemarks());
 		
-		cuentaRepositorio.save(ecuenta);
+		ECuenta ecuenta1=cuentaRepositorio.save(ecuenta);
 		movimientosRepositorio.save(emovi);
-		
+		cuenta.setCustomerId(ecuenta1.getCustomerId());
 		
 		return cuenta;
 	}
